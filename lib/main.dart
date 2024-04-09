@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notebook/Cubit/noteCubit.dart';
 import 'package:notebook/DbHelper/dbhelper.dart';
-import 'package:notebook/NoteApp/updatenotes.dart';
 
-import 'NoteApp/addNotepage.dart';
 import 'NoteApp/mainPage.dart';
 
 void main() {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_)=>NotesCubit(myDb: DbHelper.myDb),
+      create: (_) => NotesCubit(myDb: DbHelper.myDb),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
